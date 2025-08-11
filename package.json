@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -8,6 +8,7 @@
     "canvas": "^3.1.2",
     "discord.js": "^14.21.0",
     "dotenv": "^17.2.1",
+    "express": "^5.1.0",
     "form-data": "^4.0.4",
     "node-fetch": "^3.3.2",
     "sharp": "^0.34.3"
