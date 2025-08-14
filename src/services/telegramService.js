@@ -131,7 +131,7 @@ async function obtenerNombreJuegoDeUsuario(guild, userId) {
 
   console.log("actividades", presence?.activities);
 
-  if (!presence || !presence.activities) return imagenPorDefecto;
+  if (!presence || !presence.activities) return null;
 
   // Buscar actividad de tipo juego (Playing)
   const actividadJuego = presence.activities.find(
@@ -141,9 +141,7 @@ async function obtenerNombreJuegoDeUsuario(guild, userId) {
   return actividadJuego ? actividadJuego.name : null;
 }
 
-async function obtenerImagenJuegoDeUsuario(guild, userId) {
-  // const imagenPorDefecto = 'https://pngimg.com/d/discord_PNG8.png';
-  // const imagenPorDefecto = 'https://cdn.steamstatic.com/steam/apps/570/header.jpg';
+async function obtenerImagenJuegoDeUsuario(guild, userId) {  
   const imagenPorDefecto = 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/570/0bbb630d63262dd66d2fdd0f7d37e8661a410075.jpg';
 
   console.log("userId", userId);
